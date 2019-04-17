@@ -1,0 +1,27 @@
+## 服务端口号
+server:
+  port: 8000
+
+
+## eureka基本配置
+eureka:
+  instance:
+    ## 注册地址
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      ## 注册url
+      defaultZone: http://${eureka.instance.hostname}:9999/eureka/
+spring:
+  application:
+    name: app-jckc-weixin
+
+swagger:
+  base-package: com.jckc.weixin.service
+  title: 金诚科创 - 微信服务接口
+  description: 金诚科创 - 微信服务接口 - 描述
+  version: 1.0
+  terms-of-service-url: www.jckc.com
+  contact:
+    name: 陈志成
+    email: 178642170@qq.com
