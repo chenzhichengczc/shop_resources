@@ -25,3 +25,8 @@ swagger:
   contact:
     name: 陈志成
     email: 178642170@qq.com
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
