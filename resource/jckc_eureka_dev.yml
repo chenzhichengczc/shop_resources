@@ -1,0 +1,17 @@
+## 服务端口号
+server:
+  port: 9999
+
+## eureka基本配置
+eureka:
+  instance:
+    ## 注册地址
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      ## 注册url
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    ## 无需检测自身服务
+    fetch-registry: false
+    ## 无需自己注册自己服务
+    register-with-eureka: false
