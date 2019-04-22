@@ -1,5 +1,18 @@
+## eureka基本配置
+eureka:
+  instance:
+    ## 注册地址
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      ## 注册url
+      defaultZone: http://${eureka.instance.hostname}:9999/eureka/
+spring:
+  application:
+    name: app-jckc-member
+## 配置swagger 基本信息
 swagger:
-  base-package: com.jckc.weixin.service
+  base-package: com.jckc.member.service
   title: 金诚科创 - 微信服务接口
   description: 金诚科创 - 微信服务接口 - 描述
   version: 1.0
@@ -7,8 +20,3 @@ swagger:
   contact:
     name: 陈志成
     email: 178642170@qq.com
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
